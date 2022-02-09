@@ -1,19 +1,18 @@
-let msgErro = document.getElementById('error')
-let msgSuccess = document.getElementById('success')
+var erro = document.getElementById('error')
+var success = document.getElementById('success')
 
-function msg(a){
-  if(a){
-    msgErro.style.display = 'flex'
-    msgErro.innerHTML = a
-  } else{
-    msgSuccess.style.display = 'flex'
-    msgSuccess.innerHTML = 'Operação realizada com sucesso!'
-  }
-  setTimeout(() => {
-    msgErro.style.display = 'none'
-    msgErro.innerHTML = null
-
-    msgSuccess.style.display = 'none'
-    msgSuccess.innerHTML = null
-  }, 5000)
+function msg(e) {
+    if (e) {
+        erro.style.display = "flex"
+        erro.innerHTML = e
+    } else {
+        success.style.display = "flex"
+        success.innerHTML = "Operação realizada com sucesso!"
+    }
+    setTimeout(() => {
+        erro.style.display = "none"
+        erro.innerHTML = ""
+        success.style.display = "none"
+        success.innerHTML = ""
+    }, 5000)
 }

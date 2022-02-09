@@ -121,7 +121,7 @@ function checkCar(produto) {
     this.typeCheck = "carrinho"
     var mode = null
     this.user ? mode = "dropCheckOut" : mode = "entrar"
-    drop(produto, "entrar")
+    drop(produto, mode)
 }
 
 carregarquantidade()

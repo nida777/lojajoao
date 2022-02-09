@@ -1,18 +1,4 @@
 
-// function checkOut(){
-  
-//   fetch(`/checkout`, {method: "GET"})
-//     .then(result => {
-//       if(!result.ok) throw `Ops! Houve um erro! ${result.status}`
-//       location.href=result.url
-//     })
-//       .catch((err) => alert(err))
-// }// alert ('JS Funcionando.')
-
-// function debug(){
-//   alert('Tudo certo!')
-// }
-
 let imgCamisa = document.querySelector('.camisa-img')
 let imgEstampa = document.querySelector('.content-estampa')
 
@@ -43,6 +29,7 @@ function checkOut() {
     msg(error)
   }
 }
+
 //Seleciona a cor da camisa
 function selectCor(camisa) {
   this.produto = { ...camisa, ...this.estampa }

@@ -3,6 +3,16 @@ var btnLogin = document.querySelector('.btn-login')
 //Recebe todos os valores dos inputs
 let user = {}
 
+//O corpo de bodyUser estar em bodyCadUser.js e é chamado no dropdown.js no método drop()
+function loadFormSigninOrCad(bodyUser) {
+    const formUser = `
+        <div class="container-form">
+            <a class="iconCloseLoginOrCad" onclick="down()"><i class="fa fa-window-close"></i></a>
+            ${bodyUser}
+        </div>
+        `
+    return formUser
+}
 
 //Chamado também em dropdown.js no método drop()
 //Responsável por mudar para modo login ou cadastro
@@ -80,8 +90,8 @@ function cadastro() {
         }
     })
         .then((res) => res.text())
-        .then((data) => {
-            if (data) throw data
+        .then((textContent) => {
+            if (textContent) throw textContent
             reset()
             metodoCadOrLogin()
             msg()
